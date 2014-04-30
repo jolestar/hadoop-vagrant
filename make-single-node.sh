@@ -1,5 +1,5 @@
 cd ~ 
-sudo apt-get update
+#sudo apt-get update
 
 # Download java jdk
 sudo apt-get install openjdk-7-jdk
@@ -21,6 +21,7 @@ sudo sh -c 'cat /home/hadoop/.ssh/id_rsa.pub >> /home/hadoop/.ssh/authorized_key
 ssh-keygen -t rsa -P ''
 sh -c 'cat /home/vagrant/.ssh/id_rsa.pub >> /home/vagrant/.ssh/authorized_keys'
 
+sudo pkill -9 java
 hadoop_site="http://mirrors.cnnic.cn/"
 hadoop_version="2.4.0"
 
@@ -33,8 +34,8 @@ sudo tar vxzf hadoop-$hadoop_version.tar.gz -C /usr/local
 cd /usr/local
 if [ -d "hadoop" ]; then
     echo "backup hadoop directory"
-    mkdir -p hadoop.baks
-    mv -i hadoop hadoop.baks/
+    sudo mkdir -p hadoop.baks
+    sudo mv -i hadoop hadoop.baks/
 fi
 sudo mv hadoop-$hadoop_version hadoop
 sudo chown -R hadoop:hadoop hadoop
@@ -83,6 +84,8 @@ sudo -u hadoop '/usr/local/hadoop/sbin/start-yarn.sh'
 sudo -u hadoop jps
 
 # Example
-# sudo -u hadoop cd /usr/local/hadoop
+# sudo su hadoop 
+# cd /usr/local/hadoop
+# hadoop jar ./share/hadoop/mapreduce/hadoop-mapreduce-examples-2.4.0.jar pi 2 5
 # sudo -u hadoop hadoop jar ./share/hadoop/mapreduce/hadoop-mapreduce-examples-2.2.0.jar pi 2 5
 
