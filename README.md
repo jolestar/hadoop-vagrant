@@ -6,7 +6,7 @@ origin script come from https://github.com/ericduq/hadoop-scripts
 
 ### Prerequisites
 * [vagrant](http://www.vagrantup.com/) 
-* vagrant ubuntu iamge (vagrant box add ubuntu) 
+* vagrant ubuntu image (vagrant box add ubuntu) 
 
 ### Usage
 
