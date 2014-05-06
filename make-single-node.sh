@@ -1,5 +1,5 @@
 cd ~ 
-#sudo apt-get update
+sudo apt-get update
 
 # Download java jdk
 sudo apt-get install openjdk-7-jdk
@@ -76,16 +76,12 @@ sudo -u hadoop sed -i.bak 's=<configuration>=<configuration>\<property>\<name>df
 # Format Namenode
 sudo -u hadoop sh -c '/usr/local/hadoop/bin/hdfs namenode -format'
 
-# Start Hadoop Service
-sudo -u hadoop '/usr/local/hadoop/sbin/start-dfs.sh'
-sudo -u hadoop '/usr/local/hadoop/sbin/start-yarn.sh'
-
-# Check status
-sudo -u hadoop jps
-
 # Example
 # sudo su hadoop 
 # cd /usr/local/hadoop
+# /usr/local/hadoop/sbin/start-dfs.sh
+# /usr/local/hadoop/sbin/start-yarn.sh
+# jps
 # hadoop jar ./share/hadoop/mapreduce/hadoop-mapreduce-examples-2.4.0.jar pi 2 5
 # sudo -u hadoop hadoop jar ./share/hadoop/mapreduce/hadoop-mapreduce-examples-2.2.0.jar pi 2 5
 
