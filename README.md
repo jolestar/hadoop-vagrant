@@ -21,7 +21,7 @@ origin script come from https://github.com/ericduq/hadoop-scripts
 		/usr/local/hadoop/sbin/start-yarn.sh
 		hadoop jar ./share/hadoop/mapreduce/hadoop-mapreduce-examples-2.4.0.jar pi 2 5
 
-## Usage on Host Machine
+### Usage on Host Machine
 vagrant vm ip is 192.168.33.14
 	
 	./hdfs dfs -ls  hdfs://192.168.33.14:8020/
