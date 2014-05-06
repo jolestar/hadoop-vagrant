@@ -2,6 +2,7 @@ hadoop-vagrant
 ==============
 
 hadoop vagrant single node deploy script.
+origin script come from https://github.com/ericduq/hadoop-scripts
 
 ### Prerequisites
 * [vagrant](http://www.vagrantup.com/) 
