@@ -23,7 +23,7 @@ sh -c 'cat /home/vagrant/.ssh/id_rsa.pub >> /home/vagrant/.ssh/authorized_keys'
 
 sudo pkill -9 java
 hadoop_site="http://mirrors.cnnic.cn/"
-hadoop_version="2.4.0"
+hadoop_version="2.7.2"
 
 # Download Hadoop and set permissons
 cd ~
